@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+        <title>Assignment 4</title>
+        <style>
+
+            
+            form{
+                width:max-content;
+                margin:0 40%;
+            }
+            button{
+                background-color: dodgerblue;
+                border:none;
+                color: white;
+                padding: 5px;
+            }
+            button:hover{
+                cursor: pointer;
+            }
+
+            .sol{
+                margin:50px;
+            }
+
+            .sol2{
+                background-color:burlywood;
+                margin:  100px 0;
+                position: relative;
+                outline:dotted goldenrod 2px;
+                min-height: 400px;
+                max-height: 500px;
+            }
+
+            .demo-text{
+                position: absolute;
+                background-color: darkkhaki;
+                margin:  100px;
+                padding: 50px;
+                border: solid black 2px;
+                min-height: 100px;
+                max-height: 200px;
+                
+            }
+
+            .text-sol{
+                
+                color: rgb(0, 4, 255) ;
+                line-height: 1.5;
+                letter-spacing: 2px ;
+                word-spacing: 5px;
+                text-align: center;
+                text-decoration:  underline crimson;
+                text-transform: uppercase;
+            }
+
+            .text1-sol{
+                font: italic bold 16px Arial, sans-serif;
+                /* font-family: Arial, sans-serif; */
+                /* font-weight: 14px; */
+                /* font-weight: bold; */
+                /* font-style: italic; */
+            }
+
+            .text2-sol{
+                font: italic bold 16px 'Pixelify Sans', cursive;
+                /* font-family: 'Pixelify Sans', cursive; */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="sol1 sol">
+            <span style="margin: 20px;">sol1</span>
+            <form method="post" action="" oninput="dis.value=name.value">
+                <fieldset>
+
+                    <legend>Personal Details</legend>
+                    <table>
+                        <tr>
+                            <td>
+                                <label>Name</label>
+                            </td>
+                            <td>
+                                <input type="text" id="name">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Mobile</label>
+                            </td>
+                            <td>
+                                <input type="tel">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Age</label>
+                            </td>
+                            <td>
+                                <input type="number" min="10" max="40">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Email</label>
+                            </td>
+                            <td>
+                                <input type="email">                            
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>DOB</label>                            
+                            </td>
+                            <td>
+                                <input type="date">                            
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Profile Image</label>                            
+                            </td>
+                            <td>
+                                <input type="file">                            
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Age Group:</label><br>
+                            </td>
+                            <td>
+                                <input type="radio" name="ages" id="20" value="lessThan20"><label for="20">10-20</label>
+                                <input type="radio" name="ages" id="30" value="lessThan30"><label for="30">21-30</label>
+                                <input type="radio" name="ages" id="40" value="lessThan40"><label for="40">31-40</label>                            
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Languages</label><br>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="eng" id="eng" value="english"><label for="eng">English</label>
+                                <input type="checkbox" name="hind" id="hind" value="hindi"><label for="hind">Hindi</label>
+                                <input type="checkbox" name="kon" id="kon" value="konkani"><label for="kon">Konkani</label>                            
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Address</label>
+                            </td>
+                            <td>
+                                <textarea></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="country">Country</label>
+                            </td>
+                            <td>
+                                <select id="country" name="countries">
+                                    <optgroup label="Asia">
+                                        <option value="Ind">India</option>
+                                        <option value="Kor">Korea</option>
+                                    </optgroup>
+                                    <optgroup label="North America">
+                                        <option value="USA">America</option>
+                                        <option value="Can">Canada</option>
+                                    </optgroup>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="job">Job Title</label>
+                            </td>
+                            <td>
+                                <input list="job">
+                                <datalist id="job" name="jobs">
+                                    <option value="Frontend Developer"></option>
+                                    <option value="Backend Developer"></option>
+                                    <option value="Ui/Ux Designer"></option>
+                                    <option value="Data Engineer"></option>
+                            
+                                </datalist><br><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>LinkedIn url: </label>
+                            </td>
+                            <td>
+                                <input type="url"></input>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Name of User : </p>
+                            </td>
+                            <td>
+                                <output name="dis" for="name"></output>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button type="submit">Submit</button>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                </fieldset>
+            </form>
+        </div>
+
+        <div class="sol2 sol">
+            <span style="margin: 20px;">sol2</span>
+            <div class="demo-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas, nam consectetur 
+                expedita reprehenderit labore, tempore quisquam corrupti sed aut provident minima aliquid quasi.
+                 Nesciunt amet eligendi vero quasi molestias deserunt.
+            </div>
+        </div>
+
+        <div class="sol3 sol">
+            <span style="margin: 20px;">sol3</span>
+
+            <div class="text-sol">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                Assumenda velit dicta debitis nam blanditiis doloribus maiores,
+                voluptas in, maxime inventore necessitatibus? Eius minima aperiam
+                officiis nesciunt enim aliquid tempore sunt.
+            </div>
+        </div>
+        <div class="sol4 sol">
+            <span style="margin: 20px;">sol4</span>
+
+            <div class="text1-sol">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                Assumenda velit dicta debitis nam blanditiis doloribus maiores,
+                voluptas in, maxime inventore necessitatibus? Eius minima aperiam
+                officiis nesciunt enim aliquid tempore sunt.
+            </div>
+            <div class="text2-sol">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                Assumenda velit dicta debitis nam blanditiis doloribus maiores,
+                voluptas in, maxime inventore necessitatibus? Eius minima aperiam
+                officiis nesciunt enim aliquid tempore sunt.
+            </div>
+        </div>
+
+        <div class="sol5 sol">
+            <span style="margin: 20px;">sol5</span>
+            <p>Precision is the number of digits in a number </p>
+            <p>We can fix it by using, :</p>
+            <ul>
+                <li>toFixed()</li>
+                <li>toPrecision()</li>
+
+            </ul>
+        </div>
+
+        <div class="sol6 sol">
+            <span style="margin: 20px;">sol6</span>
+
+            <div id="first"></div>
+            <div id="second"></div>
+            <div id="third"></div>
+
+        </div>
+       
+        <div class="sol7 sol">
+            <span style="margin: 20px;">sol7</span>
+            <div id="max"></div>
+        </div>
+        <div class="sol8 sol">
+            <span style="margin: 20px;">sol8</span>
+            <div id="sol8"></div>
+        </div>
+        <script>
+            let x= (0.1 + 0.19);
+            document.getElementById("first").innerHTML="i) 0.1 + 0.29 => Output : " + x.toFixed(2);
+
+            let i = "0.10" * "10" + "2" / "0.9" - "0.67";
+            document.getElementById("second").innerHTML="ii)  Output : " + i;
+
+            let a = 1;
+            let b = 1;
+            let y = new Number(1);
+            let z = new Number(1);
+            document.getElementById("third").innerHTML= "iii) Output : <br> a == b =>  " + (a==b) +"<br>"+
+            "a === b =>  " + (a===b) +"<br>"+
+            "a == y =>  " + (a==y) +"<br>"+
+            "a === y =>  " + (a===y) +"<br>"+
+            "y == z =>  " + (y==z) +"<br>"+
+            "y == z =>  " + (y===z) +"<br>";
+
+            document.getElementById("max").innerHTML = "Number.MAX_VALUE : " + Number.MAX_VALUE +"<br>"+  //Number.POSITIVE_INFINITY
+            "Number.MIN_VALUE : " + Number.MIN_VALUE +"<br>"+  //Number.EPSILON 
+            "Number.EPSILON : " + Number.EPSILON +"<br>"+
+            "Number.MAX_SAFE_INTEGER : " + Number.MAX_SAFE_INTEGER +"<br>"+  //   Math.pow(2, 53) - 1
+            "Number.MIN_SAFE_INTEGER : " + Number.MIN_SAFE_INTEGER +"<br>"+  //  -Math.pow(2, 53) + 1
+            "Number.isNaN : " + Number.NaN +"<br>"+
+            "Number.NEGATIVE_INFINITY : " + Number.NEGATIVE_INFINITY +"<br>"+//   -1 / 0
+            "Number.POSITIVE : " + Number.POSITIVE_INFINITY +"<br>";//   1 / 0 
+
+            let number = 10.892;
+            document.getElementById("sol8").innerHTML = "isFinite()  :  " + Number.isFinite(123) + "<br>"+
+            "isInteger()  :  " + Number.isInteger(123) + "<br>"+
+            "isNan()  :  " + Number.isNaN(123) + "<br>"+
+            "isSafeInteger()  :  " + Number.isSafeInteger(123)+ "<br>"+
+            "parseFloat()  :  " + Number.parseFloat(10) + "<br>"+
+            "parseInt()  :  " + Number.parseInt(10) + "<br>"+
+            "valueOf()  :  " + number.valueOf() + "<br>"+
+            "toString()  :  " + number.toString(2) + "<br>"+
+            "toPrecision()  :  " + number.toPrecision(2) + "<br>"+
+            "toLocaleString() :  " + number.toLocaleString() + "<br>"+
+            "toFixed()  :  " + number.toFixed(2) + "<br>"+
+            "toExponential()  :  " + number.toExponential() + "<br>";
+
+            // They are different from their respective global method because global method first converts the value to number and then checks for the condition of method.
+            // And this methods strictly checks for numbers.
+        </script>
+    </body>
+</html>
